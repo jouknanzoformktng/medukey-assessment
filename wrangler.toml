@@ -1,0 +1,12 @@
+name = "medukey-assessment"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+
+# Configure Cloudflare Pages
+pages_build_output_dir = ".vercel/output/static"
+
+# Bind the D1 Database
+[[d1_databases]]
+binding = "DB" # The variable name used in the code
+database_name = "medukey_energy_db"
+database_id = "9b7c81f4-6cb5-4b49-af45-5908de91b4a4"
