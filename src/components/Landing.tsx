@@ -32,7 +32,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
 
           <button 
             onClick={onStart}
-            className="bg-primary text-white px-10 py-5 rounded-full text-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all hover:scale-105 active:scale-95"
+            className="bg-primary text-white px-10 py-5 rounded-md text-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all hover:scale-105 active:scale-95"
           >
             Dekouvri Fòs Eneji w Kounye a
           </button>
@@ -64,7 +64,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               href="https://stan.store/Medukeywellness?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnqeuD0juTKq8dfxBEd0lQ5y_2XYsHjUaVsME-9lWB8SnazHrAPqg50iiLq7c_aem_NkZ5YxLZF_RaQt6cAQiuVg"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl mt-4"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl mt-4"
             >
               Rezève yon Konsiltasyon
             </a>
@@ -80,7 +80,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
           <p className="text-xl text-foreground/80 mb-10">
             Antre nan pwochen kowòt metriz enèji a. Aprann kijan pou w itilize prensip syantifik ak espirityèl pou w reprann kontwòl lavi w.
           </p>
-          <button className="bg-white border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-primary/5 transition-all">
+          <button className="bg-white border-2 border-primary text-primary px-8 py-4 rounded-md text-lg font-bold hover:bg-primary/5 transition-all">
             Enskri pou Pwochen Klas La
           </button>
         </div>
@@ -102,13 +102,13 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               href="https://stan.store/Medukeywellness?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnqeuD0juTKq8dfxBEd0lQ5y_2XYsHjUaVsME-9lWB8SnazHrAPqg50iiLq7c_aem_NkZ5YxLZF_RaQt6cAQiuVg"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gold text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-gold-dark transition-all hover:scale-105 active:scale-95 shadow-lg"
+              className="inline-block bg-gold text-white px-10 py-5 rounded-md text-xl font-bold hover:bg-gold-dark transition-all hover:scale-105 active:scale-95 shadow-lg"
             >
               Achte Liv La Kounye a
             </a>
           </div>
           <div className="w-full md:w-1/2 flex justify-center mx-auto">
-            <div className="w-64 md:w-80 rounded-xl shadow-2xl overflow-hidden transform rotate-3 hover:scale-105 hover:rotate-0 transition-all duration-500 border border-white/10 mx-auto">
+            <div className="w-64 md:w-80 rounded-md shadow-2xl overflow-hidden transform rotate-3 hover:scale-105 hover:rotate-0 transition-all duration-500 border border-white/10 mx-auto">
               <img src="/ebook.jpg" alt="Énèji Féminin Book Cover" className="w-full h-auto" />
             </div>
           </div>

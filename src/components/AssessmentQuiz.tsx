@@ -107,7 +107,7 @@ export default function AssessmentQuiz({
   return (
     <div className="min-h-screen flex flex-col pt-12 items-center p-6">
       {/* Progress Bar */}
-      <div className="w-full max-w-2xl bg-gray-100 h-2 rounded-full mb-12 overflow-hidden">
+      <div className="w-full max-w-2xl bg-gray-100 h-2 rounded-md mb-12 overflow-hidden">
         <motion.div 
           className="h-full bg-gold transition-all duration-500"
           initial={{ width: 0 }}
@@ -123,7 +123,7 @@ export default function AssessmentQuiz({
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              className="bg-white p-8 rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100"
+              className="bg-white p-8 rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100"
             >
               <h2 className="text-3xl font-bold text-primary mb-6">Premye Etap</h2>
               <form onSubmit={handleIdentitySubmit} className="space-y-6">
@@ -134,11 +134,11 @@ export default function AssessmentQuiz({
                     required
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className="w-full p-4 text-lg border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                    className="w-full p-4 text-lg border border-gray-200 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                     placeholder="Ekri non w la a..."
                   />
                 </div>
-                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                <div className="bg-gray-50 p-6 rounded-md border border-gray-100">
                   <label className="block text-lg mb-4 text-foreground/80 font-semibold">Chwazi siy zodyak ou dirèkteman:</label>
                   <select
                     value={selectedSign}
@@ -147,7 +147,7 @@ export default function AssessmentQuiz({
                       setBirthMonth("");
                       setBirthDay("");
                     }}
-                    className="w-full p-4 text-lg border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+                    className="w-full p-4 text-lg border border-gray-200 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
                   >
                     <option value="">-- Chwazi Siy Ou --</option>
                     {ZODIAC_SIGNS.map(sign => (
@@ -170,7 +170,7 @@ export default function AssessmentQuiz({
                           setBirthMonth(e.target.value);
                           setSelectedSign("");
                         }}
-                        className="w-full p-4 text-lg border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+                        className="w-full p-4 text-lg border border-gray-200 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
                       >
                         <option value="">Mwa</option>
                         {Array.from({ length: 12 }, (_, i) => i + 1).map(m => (
@@ -186,7 +186,7 @@ export default function AssessmentQuiz({
                           setBirthDay(e.target.value);
                           setSelectedSign("");
                         }}
-                        className="w-full p-4 text-lg border border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+                        className="w-full p-4 text-lg border border-gray-200 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
                       >
                         <option value="">Jou</option>
                         {Array.from({ length: 31 }, (_, i) => i + 1).map(d => (
@@ -198,7 +198,7 @@ export default function AssessmentQuiz({
                 </div>
                 <button 
                   type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-xl text-lg font-bold hover:bg-primary-hover transition-colors"
+                  className="w-full bg-primary text-white py-4 rounded-md text-lg font-bold hover:bg-primary-hover transition-colors"
                 >
                   Kontinye
                 </button>
@@ -213,7 +213,7 @@ export default function AssessmentQuiz({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
-              className="bg-white p-8 rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100"
+              className="bg-white p-8 rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100"
             >
               <h3 className="text-2xl font-bold text-primary mb-8 leading-snug">
                 {QUESTIONS[step - 1].text}
@@ -223,7 +223,7 @@ export default function AssessmentQuiz({
                   <button
                     key={option.id}
                     onClick={() => handleAnswer(option.element as AstrologicalElement)}
-                    className="w-full text-left p-5 text-lg border border-gray-200 rounded-xl hover:border-gold hover:bg-gold/5 transition-all text-foreground/90 group"
+                    className="w-full text-left p-5 text-lg border border-gray-200 rounded-md hover:border-gold hover:bg-gold/5 transition-all text-foreground/90 group"
                   >
                     <span className="font-bold text-gold mr-3 group-hover:text-primary transition-colors">{option.id}.</span>
                     {option.text}
