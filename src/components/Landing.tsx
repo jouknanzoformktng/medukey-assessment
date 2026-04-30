@@ -34,7 +34,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             onClick={onStart}
             className="bg-primary text-white px-10 py-5 rounded-full text-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all hover:scale-105 active:scale-95"
           >
-            Kòmanse Evalyasyon an Kounye a
+            Dekouvri Fòs Eneji w Kounye a
           </button>
         </motion.div>
       </section>
