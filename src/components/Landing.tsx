@@ -20,10 +20,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl w-full z-10"
         >
-          <div className="inline-block border border-gold/30 bg-gold/5 px-4 py-1 rounded-full text-gold-dark font-semibold mb-6 tracking-wide text-sm">
-            EVALYASYON GRATIS
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight mt-4">
             Dekouvri Nati Kache Ou: Ki Eleman k ap Dirije Lavi w Jodi a?
           </h1>
           
@@ -53,15 +50,22 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               <img src="/profile.jpg" alt="Dr. Jimmy Saint-Hilaire" className="w-full h-full object-cover" />
             </div>
           </div>
-          <div className="w-full md:w-2/3">
-            <h2 className="text-3xl font-bold text-primary mb-4">Dr. Jimmy Saint-Hilaire</h2>
-            <h3 className="text-xl text-gold-dark mb-6 italic">Chirurgien et Coach en Santé Globale</h3>
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 md:mb-4 tracking-tight">Dr. Jimmy Saint-Hilaire</h2>
+            <h3 className="text-lg md:text-xl text-gold-dark mb-6 italic">Chirurgien et Coach en Santé Globale</h3>
             <p className="text-lg text-foreground/80 leading-relaxed mb-6">
               Mwen se yon doktè, yon chirijyen, men pi lwen pase sa, mwen se yon gid. Mwen la pou m ede w konprann kò w, lespri w, ak enèji w kòm yon sèl sistèm ki konekte. 
             </p>
-            <p className="text-lg text-foreground/80 leading-relaxed font-semibold text-primary">
+            <p className="text-lg text-foreground/80 leading-relaxed font-semibold text-primary mb-8">
               "Je t'accompagne à guérir en profondeur et à élever ta vibration."
             </p>
+            
+            <a 
+              href="#"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl"
+            >
+              Rezève yon Konsiltasyon
+            </a>
           </div>
         </div>
       </section>
@@ -87,7 +91,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
       <section id="ebook" className="py-24 bg-primary text-white px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,160,23,0.15),transparent_50%)]" />
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
             <h2 className="text-4xl font-bold mb-6">Énèji Féminin</h2>
             <p className="text-xl text-white/80 italic mb-8">
               Liv ki pral chanje fason w wè pouvwa reyèl ou. Metrize enèji mayetik ki nan ou a.
@@ -101,8 +105,8 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               Achte Liv La Kounye a
             </a>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div className="w-64 md:w-80 rounded-xl shadow-2xl overflow-hidden transform rotate-3 hover:scale-105 hover:rotate-0 transition-all duration-500 border border-white/10">
+          <div className="w-full md:w-1/2 flex justify-center mx-auto">
+            <div className="w-64 md:w-80 rounded-xl shadow-2xl overflow-hidden transform rotate-3 hover:scale-105 hover:rotate-0 transition-all duration-500 border border-white/10 mx-auto">
               <img src="/ebook.jpg" alt="Énèji Féminin Book Cover" className="w-full h-auto" />
             </div>
           </div>

@@ -71,9 +71,9 @@ export default function Home() {
       {/* Sticky Header */}
       <header className="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <img src="/medukey_logo.svg" alt="Medukey Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-primary tracking-widest hidden md:block">
+          <div className="flex items-center gap-2 md:gap-3">
+            <img src="/medukey_logo.svg" alt="Medukey Logo" className="h-8 md:h-10 w-auto" />
+            <span className="text-lg md:text-xl font-bold text-primary tracking-widest">
               MEDUKEY
             </span>
           </div>
