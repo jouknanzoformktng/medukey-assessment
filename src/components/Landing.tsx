@@ -61,8 +61,10 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             </p>
             
             <a 
-              href="#"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl"
+              href="https://stan.store/Medukeywellness?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnqeuD0juTKq8dfxBEd0lQ5y_2XYsHjUaVsME-9lWB8SnazHrAPqg50iiLq7c_aem_NkZ5YxLZF_RaQt6cAQiuVg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl mt-4"
             >
               Rezève yon Konsiltasyon
             </a>
