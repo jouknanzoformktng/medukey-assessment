@@ -97,7 +97,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               Liv ki pral chanje fason w wè pouvwa reyèl ou. Metrize enèji mayetik ki nan ou a.
             </p>
             <a 
-              href="https://beacons.ai/medukey?fbclid=IwY2xjawRd085leHRuA2FlbQIxMABicmlkETE3VTFMNGV6OXYzMzhwR2xJc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhB_ypI2DVEsIAZq6klwjawrZTtf-KcRwuyGkcqwdKPEqihi_cyDKfbcP7_O_aem_kQgCCoULFlK7a9AsgjFgtA"
+              href="https://stan.store/Medukeywellness?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnqeuD0juTKq8dfxBEd0lQ5y_2XYsHjUaVsME-9lWB8SnazHrAPqg50iiLq7c_aem_NkZ5YxLZF_RaQt6cAQiuVg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gold text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-gold-dark transition-all hover:scale-105 active:scale-95 shadow-lg"
