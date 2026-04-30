@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Landing from "@/components/Landing";
 import AssessmentQuiz from "@/components/AssessmentQuiz";
 import LeadCapture from "@/components/LeadCapture";
@@ -20,11 +20,33 @@ export default function Home() {
   const [data, setData] = useState<AssessmentData | null>(null);
   const [quizElement, setQuizElement] = useState<AstrologicalElement | null>(null);
 
-  const handleStart = () => setAppState("quiz");
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash || '#landing';
+      
+      if (hash.startsWith('#quiz')) {
+        setAppState('quiz');
+      } else if (hash === '#lead_capture') {
+        setAppState('lead_capture');
+      } else if (hash === '#dashboard') {
+        setAppState('dashboard');
+      } else {
+        setAppState('landing');
+      }
+    };
+    
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleStart = () => {
+    window.location.hash = '#quiz-0';
+  };
 
   const handleQuizComplete = (quizData: AssessmentData) => {
     setData(quizData);
-    setAppState("lead_capture");
+    window.location.hash = '#lead_capture';
   };
 
   const handleEmailSubmit = async (email: string) => {
@@ -63,7 +85,7 @@ export default function Home() {
       console.error("Failed to submit assessment:", error);
     }
 
-    setAppState("dashboard");
+    window.location.hash = '#dashboard';
   };
 
   return (

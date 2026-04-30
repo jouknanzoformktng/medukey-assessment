@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getZodiacElementFromDate, AstrologicalElement, ZODIAC_SIGNS } from "@/lib/zodiac";
 
@@ -61,6 +61,20 @@ export default function AssessmentQuiz({
   const [selectedSign, setSelectedSign] = useState("");
   const [answers, setAnswers] = useState<AstrologicalElement[]>([]);
 
+
+  useEffect(() => {
+    const handleHash = () => {
+      const match = window.location.hash.match(/#quiz-(\d+)/);
+      if (match) {
+        setStep(parseInt(match[1], 10));
+      }
+    };
+    
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
   // Total steps = 1 (Identity) + 4 (Questions) = 5
   const progress = ((step) / 5) * 100;
 
@@ -68,15 +82,16 @@ export default function AssessmentQuiz({
     e.preventDefault();
     if (!firstName) return;
     if (!selectedSign && (!birthMonth || !birthDay)) return;
-    setStep(1);
+    window.location.hash = '#quiz-1';
   };
 
   const handleAnswer = (element: AstrologicalElement) => {
-    const newAnswers = [...answers, element];
+    const newAnswers = [...answers];
+    newAnswers[step - 1] = element;
     setAnswers(newAnswers);
     
     if (step < 4) {
-      setStep(step + 1);
+      window.location.hash = `#quiz-${step + 1}`;
     } else {
       let baseElement: AstrologicalElement | null = null;
       if (selectedSign) {
